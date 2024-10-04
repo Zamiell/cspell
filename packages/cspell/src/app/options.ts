@@ -5,38 +5,46 @@ export interface LinterOptions extends BaseOptions, Omit<CacheOptions, 'version'
      * Display verbose information
      */
     verbose?: boolean;
+
     /**
      * Show extensive output.
      */
     debug?: boolean;
+
     /**
      * a globs to exclude files from being checked.
      */
     exclude?: string[] | string;
+
     /**
      * Only report the words, no line numbers or file names.
      */
     wordsOnly?: boolean;
+
     /**
      * unique errors per file only.
      */
     unique?: boolean;
+
     /**
      * root directory, defaults to `cwd`
      */
     root?: string;
+
     /**
      * Determine if files / directories starting with `.` should be part
      * of the glob search.
      * @default false
      */
     dot?: boolean;
+
     /**
      * Show part of a line where an issue is found.
      * if true, it will show the default number of characters on either side.
      * if a number, it will shat number of characters on either side.
      */
     showContext?: boolean | number;
+
     /**
      * Show suggestions for spelling errors.
      */
@@ -93,6 +101,7 @@ export interface LinterOptions extends BaseOptions, Omit<CacheOptions, 'version'
      * configuration.
      */
     reporter?: string[];
+
     /**
      * Load and parse documents, but do not spell check.
      */
@@ -159,10 +168,12 @@ export interface BaseOptions {
      * Path to configuration file.
      */
     config?: string;
+
     /**
      * Programming Language ID.
      */
     languageId?: string;
+
     /**
      * Locale to use.
      */
@@ -198,27 +209,33 @@ export interface LinterCliOptions extends LinterOptions {
      * Show legacy output
      */
     legacy?: boolean;
+
     /**
      * Show summary at the end
      */
     summary?: boolean;
+
     /**
      * Show issues
      */
     issues?: boolean;
+
     /**
      * Run in silent mode.
      * @default false
      */
     silent?: boolean;
+
     /**
      * Show progress
      */
     progress?: boolean;
+
     /**
      * issues are shown with a relative path to the root or `cwd`
      */
     relative?: boolean;
+
     /**
      * Files must be found or cli will exit with an error.
      */
